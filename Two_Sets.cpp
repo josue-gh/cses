@@ -1,5 +1,7 @@
 #include<iostream>
+#include<vector>
 using namespace std;
+
 int main()
 {
     long long n;
@@ -8,7 +10,8 @@ int main()
     int pos=1;
     int aux=1;
     int a=0;
-    int arr[1000000];
+    vector<long long> arr;
+
     if(total%2==0){
         cout<<"YES"<<endl;
         if(n%2==0){
@@ -16,7 +19,7 @@ int main()
             cout<<"1 ";
             for(int i=2;i<=n;i++){
                 if(pos%2!=0){   
-                    arr[a]=i;
+                    arr.push_back(i);
                     a++;
                     aux++;
                     if(aux==3){
@@ -42,7 +45,7 @@ int main()
         	cout<<conjuntos+1<<endl;
             for(int i=1;i<=n;i++){
                if(pos%2==0){   
-                    arr[a]=i;
+                    arr.push_back(i);
                     a++;
                     aux++;
                     if(aux==3){
